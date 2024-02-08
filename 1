@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.jpg'); /* Remplacez 'background.jpg' par votre image de fond hacker */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 300px; /* Ajustez selon la taille de votre logo */
+            max-height: 300px; /* Ajustez selon la taille de votre logo */
+            animation: pulse 2s infinite alternate;
+        }
+
+        .enter-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: green;
+            border: 2px solid green;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s, border-color 0.3s;
+            outline: none;
+        }
+
+        .enter-button:hover {
+            color: black;
+            border-color: black;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c17a15b-6650-4f05-b9cd-5c7d47f3945c/df1xopt-5573817e-cb77-4dcc-a5cb-4c4725453a32.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjMTdhMTViLTY2NTAtNGYwNS1iOWNkLTVjN2Q0N2YzOTQ1Y1wvZGYxeG9wdC01NTczODE3ZS1jYjc3LTRkY2MtYTVjYi00YzQ3MjU0NTNhMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ms2RnkRdw4tmntR_MrdEG1-iiRGW5alM-Zuw9xwCzZQ" alt="Logo">
+        </div>
+        <button class="enter-button" onclick="enterChat()">Entrer</button>
+    </div>
+
+    <script>
+        function enterChat() {
+            window.location.href = "file:///C:/Users/matteoilinskas/Desktop/est%202.html"; // Remplacez "https://example.com" par l'URL de votre site de chat en temps réel
+        }
+    </script>
+</body>
+</html>
