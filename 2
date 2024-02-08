@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacking Animation</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hacking-animation {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    color: green;
+    font-family: monospace;
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  .hacking-text {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 2s steps(20, end) infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  .cursor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: green;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0 }
+  }
+
+  .new-site {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0;
+  }
+
+  .new-site-text {
+    font-size: 40px;
+  }
+
+  .highlight {
+    color: green;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .fade-in {
+    animation: fade-in 1s forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hacking-animation">
+    <div class="hacking-text">
+      <span class="text">Hacking in progress...</span>
+    </div>
+    <div class="cursor"></div>
+    <div class="new-site hidden">
+      <span class="new-site-text fade-in"><span class="highlight">&lt; ? &gt;</span> Bonjour et bienvenue</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  setTimeout(() => {
+    const hackingText = document.querySelector('.hacking-text');
+    hackingText.style.animation = 'none';
+    hackingText.innerHTML = '<span class="text fade-in"><span class="highlight">&lt; ? &gt;</span> Bonjour et bienvenue</span>';
+    setTimeout(() => {
+      document.querySelector('.new-site').classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = "file:///C:/Users/matteoilinskas/Desktop/est3.html"; // Remplacer example.com par l'URL souhaitée
+      }, 5000);
+    }, 5000);
+  }, 5000);
+</script>
+</body>
+</html>
+
